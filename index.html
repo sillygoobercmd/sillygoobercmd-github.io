@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ＧＯＯＢＥＲ ＺＯＮＥ :P</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+  * { box-sizing:border-box; }
+  html,body { margin:0; min-height:100%; }
+  body {
+    font-family:Fredoka,system-ui,sans-serif;
+    color:#fff;
+    background:
+      radial-gradient(circle at 15% 20%, #ff00cc55, transparent 25%),
+      radial-gradient(circle at 85% 75%, #00ffff44, transparent 30%),
+      linear-gradient(135deg,#080018,#15002d 45%,#001b20);
+    overflow-x:hidden;
+  }
+
+  body::before {
+    content:"";
+    position:fixed; inset:0; pointer-events:none;
+    background-image:
+      radial-gradient(#fff 1px,transparent 1px),
+      radial-gradient(#0ff 1px,transparent 1px);
+    background-size:55px 55px,91px 91px;
+    opacity:.13;
+    animation: drift 12s linear infinite;
+  }
+
+  @keyframes drift { to { background-position:110px 55px,-91px 91px; } }
+  @keyframes pulse { 50% { transform:scale(1.025); filter:brightness(1.35); } }
+  @keyframes float { 50% { transform:translateY(-14px) rotate(3deg); } }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  .wrap { width:min(1050px,92vw); margin:auto; padding:30px 0 70px; position:relative; z-index:1; }
+
+  header {
+    text-align:center;
+    padding:28px 18px;
+    border:3px solid #00ffff;
+    border-radius:28px;
+    background:#070016cc;
+    box-shadow:0 0 12px #00ffff,0 0 40px #ff00cc77,inset 0 0 35px #5b00ff33;
+  }
+
+  h1 {
+    margin:0;
+    font-size:clamp(42px,9vw,90px);
+    line-height:.9;
+    color:#fff;
+    text-shadow:0 0 5px #fff,0 0 15px #00ffff,0 0 30px #ff00cc,4px 4px 0 #ff00cc;
+    animation:pulse 1.7s ease-in-out infinite;
+  }
+
+  .subtitle { margin:18px 0 0; font-size:22px; color:#aaffff; text-shadow:0 0 10px #00ffff; }
+
+  .emoticons {
+    font-size:28px; letter-spacing:10px; margin-top:14px;
+    animation:float 2.4s ease-in-out infinite;
+  }
+
+  .grid { display:grid; grid-template-columns:1.25fr .75fr; gap:22px; margin-top:22px; }
+  @media(max-width:780px){ .grid{grid-template-columns:1fr;} }
+
+  .card {
+    border:2px solid #ff00cc;
+    border-radius:24px;
+    padding:22px;
+    background:#090014dd;
+    box-shadow:0 0 10px #ff00cc,0 0 28px #7b00ff55;
+  }
+
+  .card h2 { margin-top:0; color:#7ffcff; text-shadow:0 0 12px #00ffff; }
+
+  .goober-img {
+    width:100%; max-height:430px; object-fit:cover;
+    border-radius:18px;
+    border:3px solid #7cff00;
+    box-shadow:0 0 10px #7cff00,0 0 35px #7cff0055;
+    display:block;
+  }
+
+  .caption {
+    margin-top:12px; font-size:20px; text-align:center;
+    color:#ff8cff; text-shadow:0 0 10px #ff00cc;
+  }
+
+  button {
+    width:100%; border:2px solid #00ffff; border-radius:16px;
+    padding:15px; margin:8px 0; cursor:pointer;
+    font:700 20px Fredoka,sans-serif; color:#080012;
+    background:#7cff00;
+    box-shadow:0 0 8px #7cff00,0 0 24px #7cff0066;
+    transition:.12s;
+  }
+  button:hover { transform:translateY(-3px) rotate(-1deg); box-shadow:0 0 15px #7cff00,0 0 40px #00ffff88; }
+  button:active { transform:scale(.96) rotate(1deg); }
+
+  .meter { height:25px; border:2px solid #ff00cc; border-radius:99px; overflow:hidden; margin:10px 0 18px; }
+  .bar { height:100%; width:100%; background:linear-gradient(90deg,#7cff00,#00ffff,#ff00cc); box-shadow:0 0 18px #00ffff; }
+
+  .news { line-height:1.8; font-size:18px; }
+  .news div { padding:5px 0; }
+
+  #message {
+    min-height:52px; margin-top:14px; padding:13px;
+    border:2px dashed #ffff00; border-radius:14px;
+    color:#ffff88; text-align:center; font-size:19px;
+    text-shadow:0 0 8px #ffff00;
+  }
+
+  .floating {
+    position:fixed; z-index:2; pointer-events:none;
+    font-size:28px; text-shadow:0 0 12px currentColor;
+    animation:float 2s ease-in-out infinite;
+  }
+  .f1{left:3vw;top:12vh;color:#ff00cc}.f2{right:4vw;top:30vh;color:#00ffff}
+  .f3{left:6vw;bottom:12vh;color:#7cff00}.f4{right:7vw;bottom:8vh;color:#ffff00}
+
+  footer { text-align:center; margin-top:22px; color:#d9bfff; font-size:17px; }
+  .tiny { opacity:.7; }
+</style>
+</head>
+<body>
+<div class="floating f1">:3</div>
+<div class="floating f2">>:3</div>
+<div class="floating f3">(・ω・)</div>
+<div class="floating f4">:P</div>
+
+<div class="wrap">
+  <header>
+    <h1>ＧＯＯＢＥＲ ＺＯＮＥ :P</h1>
+    <div class="subtitle">welcome to the least necessary website on the internet ( ͡° ͜ʖ ͡°)</div>
+    <div class="emoticons">:3 &nbsp; :D &nbsp; >:3 &nbsp; owo &nbsp; ._. &nbsp; :P</div>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>🐈 THE SUSPICIOUS GOOber CAT :3</h2>
+      <img class="goober-img" src="goober-cat.png" alt="Suspicious goober cat">
+      <div class="caption">WHY DOES HE LOOK LIKE THAT D:</div>
+    </section>
+
+    <aside class="card">
+      <h2>⚡ GOOBER CONTROL PANEL &gt;:3</h2>
+
+      <button onclick="goober()">CLICK THE GOOBER :3</button>
+      <button onclick="randomEmote()">GENERATE EMOTICON (ง'̀-'́)ง</button>
+      <button onclick="fish()">DEPLOY FISH 🐟</button>
+      <button onclick="badIdea()">DO NOT PRESS >:(</button>
+
+      <div id="message">waiting for goober activity... ._.</div>
+
+      <h2 style="margin-top:24px">GOOBER LEVEL :D</h2>
+      <div class="meter"><div class="bar" id="bar"></div></div>
+
+      <div class="news">
+        <div>🟢 NORMALITY: <b>0%</b> :(</div>
+        <div>🩷 SILLY: <b>999%</b> :3</div>
+        <div>🔵 GLUB: <b>YES</b> :P</div>
+        <div>🟣 BRAIN CELLS: <b>probably</b> @_@</div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="card" style="margin-top:22px">
+    <h2>📢 VERY IMPORTANT GOOBER NEWS (real)</h2>
+    <div class="news">
+      <div>• goober has been spotted :3</div>
+      <div>• the fish has no idea where it is 🐟</div>
+      <div>• Glubinson the III remains unaccounted for >:3</div>
+      <div>• someone pressed the forbidden button D:</div>
+      <div>• authorities are extremely confused (・_・;)</div>
+    </div>
+  </section>
+
+  <footer>
+    made with 73% neon, 24% silliness, and 3% questionable decisions :P<br>
+    <span class="tiny">if the website starts glowing louder, leave immediately :3</span>
+  </footer>
+</div>
+
+<script>
+const messages = [
+  "GOOBER DETECTED :3",
+  "you have activated the silly machine >:3",
+  "glub glub glub :P",
+  "WHY ARE YOU CLICKING THIS ._.",
+  "certified goober behavior ( ͡° ͜ʖ ͡°)",
+  "the cat knows what you did D:",
+  "excellent. absolutely useless. :D",
+  "GOOBER POWER INCREASING 📈"
+];
+
+const emoticons = [":3", ":D", ">:3", ":P", "._.", "owo", "uwu", "^_^", "D:", "x_x", "(・ω・)", "(╯°□°)╯"];
+
+function goober(){
+  document.getElementById("message").textContent =
+    messages[Math.floor(Math.random()*messages.length)];
+  const bar = document.getElementById("bar");
+  bar.style.width = (70 + Math.random()*30) + "%";
+}
+
+function randomEmote(){
+  document.getElementById("message").textContent =
+    "EMOTICON ACQUIRED: " + emoticons[Math.floor(Math.random()*emoticons.length)];
+}
+
+function fish(){
+  const f=document.createElement("div");
+  f.textContent="🐟 :3";
+  Object.assign(f.style,{
+    position:"fixed",left:"-120px",top:(20+Math.random()*65)+"vh",
+    zIndex:10,fontSize:"42px",filter:"drop-shadow(0 0 12px #00ffff)",
+    transition:"transform 4s linear"
+  });
+  document.body.appendChild(f);
+  requestAnimationFrame(()=>f.style.transform="translateX(calc(100vw + 240px))");
+  setTimeout(()=>f.remove(),4200);
+  document.getElementById("message").textContent="THE FISH HAS BEEN DEPLOYED 🐟 >:3";
+}
+
+function badIdea(){
+  document.getElementById("message").textContent="you pressed it. why. D:";
+  document.body.animate(
+    [{filter:"hue-rotate(0deg)"},{filter:"hue-rotate(360deg)"},{filter:"hue-rotate(0deg)"}],
+    {duration:900}
+  );
+}
+</script>
+</body>
+</html>
